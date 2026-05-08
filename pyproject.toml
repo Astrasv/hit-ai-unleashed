@@ -17,5 +17,7 @@ dependencies = [
     "mcp>=1.27.0",
     "pypdf>=6.10.2",
     "python-dotenv>=1.2.2",
+    "scipy>=1.17.1",
+    "sounddevice>=0.5.5",
     "tavily-python>=0.7.24",
 ]
