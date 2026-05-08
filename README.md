@@ -12,6 +12,9 @@ The project is structued in such a way that each topic has its own folder
 # Setup Docs
 
 
+## Prerequisites
+
+
 ## Install `uv` (fast Python package manager)
 
 ### macOS / Linux (curl)
@@ -48,30 +51,49 @@ uv --version
 
 ## Setup the project for running
 
+Clone the repo and navigate into it:
+
 ```bash
-# Clone the repo
 git clone https://github.com/Astrasv/hit-ai-unleashed
 cd ai_unleashed_hit
+```
 
-# Create a virtual environment and install dependencies
+Create a virtual environment and install dependencies:
+
+```bash
 uv sync
+```
 
-# Activate the virtual environment
-# macOS / Linux:
-source .venv/bin/activate
-# Windows (cmd):
-.venv\Scripts\activate
-# Windows (PowerShell):
-.venv\Scripts\Activate.ps1
+Activate the virtual environment:
 
-# Start Jupyter Lab
+- **macOS / Linux:** `source .venv/bin/activate`
+- **Windows (cmd):** `.venv\Scripts\activate`
+- **Windows (PowerShell):** `.venv\Scripts\Activate.ps1`
+
+Set up environment variables:
+
+- **macOS / Linux:** `cp .env.example .env`
+- **Windows:** `copy .env.example .env`
+
+
+Start Jupyter Lab:
+
+```bash
 uv run jupyter lab
 ```
 
-> **Tip:** You can run a notebook directly without activating the venv:  
+> **Tip:** Run a notebook directly without activating the venv:  
 > `uv run jupyter notebook path/to/notebook.ipynb`
 
+## Setting up API keys
+```bash
+cp .env.example .env
+```
 
+- Get the Tavily API key in [Tavily API Key Link](https://app.tavily.com/home). 
+- Get Google Gemini API Key in [Google Gemini AI studio](https://aistudio.google.com/app/api-keys)
+
+Other API keys are optional
 
 # Project Folder Structure
 
