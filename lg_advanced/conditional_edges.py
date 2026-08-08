@@ -9,15 +9,15 @@ class State(TypedDict):
 
 
 def node_1(state):
-    print("---Node 1---")
+    print("---Node 1   Decision Node---")
     return {"graph_state": state['graph_state'] +" I am"}
 
 def node_2(state):
-    print("---Node 2---")
+    print("---Node 2   Happy Node---")
     return {"graph_state": state['graph_state'] +" happy!"}
 
 def node_3(state):
-    print("---Node 3---")
+    print("---Node 3   Sad Node---")
     return {"graph_state": state['graph_state'] +" sad!"}
 
 
@@ -42,5 +42,5 @@ builder.add_edge("node_2", END)
 builder.add_edge("node_3", END)
 
 graph = builder.compile()
-graph.invoke({"graph_state" : "Hi asd"})
+graph.invoke({"graph_state" : "Hi smile"})
 
